@@ -1,0 +1,116 @@
+.card {
+    // height:120px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 2%;
+    background-color: white;
+    color: black;
+}
+
+
+.container-fluid {
+    padding:3%;
+    margin-top: 4%;
+    background-color: rgb(248, 242, 242);
+}
+
+.bx {
+    font-size: 3em;
+    padding-top: 0.4em;
+}
+
+///recent order//
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    padding: 8px;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 1px solid #DDD;
+    border-top: 1px solid #DDD;
+    font-weight: 600;
+}
+
+td {
+    padding: 6px;
+    font-size: 14px;
+    border-bottom: 1px solid #DDD;
+
+}
+
+.table-container {
+    max-height: 300px;
+    overflow-y: auto;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.recent_order {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #fff;
+    padding: 2%;
+}
+.new_user{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color:#fff;
+    padding: 6%;
+}
+
+.status1{
+    color: white;
+    padding: 5px 14px;
+    background-color: rgb(50, 97, 50);
+}
+.status2{
+    color: white;
+    padding: 5px 10px;
+    background-color: rgb(128, 44, 19);
+}
+.status3{
+    color: white;
+    padding:5px 14px;
+    background-color: rgb(161, 155, 153);
+}
+
+.btn{
+    color: black;
+    background-color: #9da2aa;
+    padding: 3%;
+    font-size: 12px;
+}
+
+.btn1{
+    color: white;
+    background-color: #2c6bd2;
+    padding: 3%;
+    font-size: 12px;
+}
+.users{
+    max-height:295px;
+    overflow-y: auto;
+}
+.users p{
+    font-size: 10px;
+}
+
+.users h6{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.users h4{
+    font-size: 12px; 
+    margin-left: 5%;
+    margin-top: -0.5em;
+}
+
+.card_active{
+    background-color: #2c6bd2;
+    color: white !important; 
+}
+

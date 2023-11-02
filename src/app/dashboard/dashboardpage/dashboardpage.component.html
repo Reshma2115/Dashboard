@@ -1,0 +1,134 @@
+<section>
+    <div class="container-fluid">
+        <!-- card section -->
+        <div class="row">
+            <div class="col-md-3" *ngFor="let cards of top_cards">
+                <div class="card card1" [ngClass]="{'card_active':cards.card==='active'}">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="d-flex no-block">
+                                <div>
+                                    <h1>{{cards.value}}%</h1>
+                                    <p class="m-0">{{cards.header}}</p>
+                                    <small class="m-0">{{cards.sub_header}}..</small>
+                                </div>
+                                <div class="ms-auto">
+                                    <i class='bx {{cards.icon}}' style='color:rgb(228, 220, 220)'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Order -->
+        <div class="row mt-3">
+            <div class="col-md-8 ">
+                <div class="recent_order">
+                    <div class="heading">
+                        <h5>Recent Orders</h5>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <th>Customers</th>
+                                <th>Products</th>
+                                <th>Delivery Date</th>
+                                <th>Status</th>
+                                <th>Tracking Noof</th>
+                                <th>Shipping</th>
+                            </tr>
+                            <tr *ngFor="let order of recent_orders">
+                                <td>{{order.name}}</td>
+                                <td>{{order.product}}</td>
+                                <td>{{order.delivery_date | date:'mediumDate'}}</td>
+                                <td><span
+                                        [ngClass]="{'status1':order.status==='Paid','status2':order.status==='Failed','status3':order.status==='Pending'}">{{order.status}}</span>
+                                </td>
+                                <td>{{order.tracking_no}}</td>
+                                <td>{{order.shipping}}</td>
+
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="new_user">
+                    <div class="heading">
+                        <h5 class="m-0">New User Registrations</h5>
+                    </div>
+                    <div class="users">
+                        <div class="row mt-3" *ngFor="let user of new_users">
+                            <div class="col-md-2">
+                                <div class="user_data">
+                                    <img src="{{user.picture}}" width="100%">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="user_data">
+                                    <h6 class="m-0">{{user.name}}</h6>
+                                    <p>{{user.country}}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="user_data pt-1 d-flex">
+                                    <mat-progress-bar mode="determinate" value="{{user.progress}}"></mat-progress-bar>
+                                    <h4>{{user.progress}}%</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="user_data">
+                                    <button class="btn" [ngClass]="{'btn1':user.isActive}">More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- chart -->
+        <div class="row mt-3">
+            <div class="col-md-4">
+              <div class="new_user">
+                <div id="chart">
+                    <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
+                        [dataLabels]="chartOptions.dataLabels" [grid]="chartOptions.grid" [stroke]="chartOptions.stroke"
+                        [title]="chartOptions.title"></apx-chart>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-4">
+              <div class="new_user">
+                <div id="chart">
+                    <apx-chart [series]="chartOptions1.series" [chart]="chartOptions1.chart"
+                        [dataLabels]="chartOptions1.dataLabels" [plotOptions]="chartOptions1.plotOptions"
+                        [yaxis]="chartOptions1.yaxis" [xaxis]="chartOptions1.xaxis" [stroke]="chartOptions1.stroke"
+                        [grid]="chartOptions1.grid" [fill]="chartOptions1.fill"
+                        [annotations]="chartOptions1.annotations" [title]="chartOptions1.title"></apx-chart>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+                <div class="new_user h-100">
+                    <div id="chart" >
+                        <apx-chart
+                          [series]="chartOptions2.series"
+                          [chart]="chartOptions2.chart"
+                          [labels]="chartOptions2.labels"
+                          [responsive]="chartOptions2.responsive"
+                          [title]="chartOptions2.title"
+                        ></apx-chart>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

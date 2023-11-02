@@ -1,0 +1,14 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+mat-drawer{
+    background:#F4EEE0;
+}
+mat-drawer-content{
+    height: 100vh;
+}
+::-webkit-scrollbar{
+    display: none;
+}

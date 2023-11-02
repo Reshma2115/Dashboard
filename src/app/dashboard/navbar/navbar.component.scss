@@ -1,0 +1,44 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+.container-fluid {
+    position: sticky;
+    z-index: 999;
+    top: -10px;
+
+}
+::ng-deep .mat-icon,
+.material-symbols-outlined {
+    color: #34316E;
+}
+::ng-deep {
+    .shadow {
+        box-shadow: 0 0rem 0.5rem rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .mat-toolbar {
+        background-color: #FFFFFF;
+        position: fixed;
+    }
+}
+
+.dropdown-item {
+    text-align: center;
+}
+
+.mat-toolbar-single-row {
+    border-radius: 6px;
+}
+
+.shadow{
+    padding: 1.3%;
+}
+
+.searchbar{
+    padding-left: 2%;
+}
+
+input[type="text"]{
+    border: none !important;
+    padding-left: 3%;
+}

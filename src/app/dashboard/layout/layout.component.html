@@ -1,0 +1,14 @@
+<div class="main">
+    <mat-drawer-container>
+        <mat-drawer mode="side" [opened]="sideBarOpen">
+            <app-sidebar></app-sidebar>
+        </mat-drawer>
+        <mat-drawer-content>
+            <app-navbar style="height: 10%;"></app-navbar>
+            <div class="contentBar">
+                <router-outlet></router-outlet>
+            </div>
+        </mat-drawer-content>
+
+    </mat-drawer-container>
+</div>
